@@ -75,4 +75,4 @@ end <- length(names(combined))
 
 subjectactivity <- group_by(combined, subject, activity)
 final <- summarize_at(subjectactivity, names(combined)[c(-1,-2)], mean)
-write.csv(final, "tidy_data.csv")
+write.table(final, "tidy_data.txt")
